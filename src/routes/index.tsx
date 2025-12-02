@@ -4,7 +4,6 @@ import IdeaCard from '@/components/IdeaCard';
 import { Lightbulb } from 'lucide-react';
 import { fetchIdeas } from '@/api/ideas';
 
-
 const ideasQueryOptions = () =>
   queryOptions({
     queryKey: ['ideas'],
@@ -23,6 +22,7 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   const { data: ideas } = useSuspenseQuery(ideasQueryOptions());
+  const latestIdeas = ideas.slice(0, 3);
 
   return (
     <div className='flex flex-col md:flex-row items-start justify-between gap-10 p-6 text-blue-600'>
@@ -43,7 +43,9 @@ function HomePage() {
         </h2>
         <div className='space-y-6'>
           {/* Card Starts Here */}
-          {ideas.map((idea) => <IdeaCard idea={idea} />).splice(0, 3)}
+          {latestIdeas.map((idea) => (
+            <IdeaCard idea={idea} button={false} />
+          ))}
           {/* Card Ends Here */}
         </div>
 
