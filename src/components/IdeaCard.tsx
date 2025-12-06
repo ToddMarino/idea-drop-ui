@@ -15,6 +15,7 @@ const IdeaCard = ({
       button,
   });
 
+
   return (
     <div className='border border-gray-300 p-4 rounded shadow bg-white flex flex-col justify-between'>
       <div>
@@ -26,7 +27,7 @@ const IdeaCard = ({
         params={{ ideaId: idea.id.toString() }}
         className={linkClasses}
       >
-        {button ? 'View Idea' : 'Read More →' }
+        {button ? 'View Idea' : 'Read More →'}
       </Link>
     </div>
   );
