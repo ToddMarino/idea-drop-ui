@@ -15,9 +15,11 @@ const IdeaCard = ({
       button,
   });
 
-
   return (
-    <div className='border border-gray-300 p-4 rounded shadow bg-white flex flex-col justify-between'>
+    <div
+      className='border border-gray-300 p-4 rounded shadow bg-white flex flex-col justify-between'
+      key={idea.id}
+    >
       <div>
         <h2 className='text-lg font-semibold'>{idea.title}</h2>
         <p className='text-gray-700 mt-2'>{idea.summary}</p>

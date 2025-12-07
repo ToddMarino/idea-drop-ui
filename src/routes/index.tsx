@@ -49,7 +49,7 @@ function HomePage() {
         <div className='space-y-6'>
           {/* Card Starts Here */}
           {latestIdeas.map((idea) => (
-            <IdeaCard idea={idea} button={false} />
+            <IdeaCard idea={idea} button={false} key={idea.id} />
           ))}
           {/* Card Ends Here */}
         </div>

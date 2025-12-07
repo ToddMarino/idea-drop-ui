@@ -5,5 +5,6 @@ export type Idea = {
   description: string;
   tags: string[];
   createdAt: string;
+  updatedAt: string;
   user: string;
 };
