@@ -6,7 +6,7 @@ import IdeaCard from '@/components/IdeaCard';
 const ideasQueryOptions = () =>
   queryOptions({
     queryKey: ['ideas'],
-    queryFn: () => fetchIdeas(3),
+    queryFn: () => fetchIdeas(),
   });
 
 export const Route = createFileRoute('/ideas/')({
